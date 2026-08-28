@@ -1,71 +1,163 @@
-Question 1
- * Total Viscous Drag Force (F):
-   
- * Minimizing Viscous Drag:
-   To minimize F, differentiate with respect to y and set to zero:
-   
- * Relative Position (y):u
-   
-Question 2
- * Upstream Hydrostatic Force (F_1):
-   * Density of upstream liquid: \rho_1 = 1.45 \times 1000 = 1450\text{ kg/m}^3
-   * Gate height h_{gate} = 1.2\text{ m}, width w = 2.0\text{ m}, area A = 2.4\text{ m}^2.
-   * Distance from free surface to centroid of gate: \bar{h}_1 = 1.5 + \frac{1.2}{2} = 2.1\text{ m}
-   * Force: F_1 = \rho_1 g A \bar{h}_1 = (1450)(9.81)(2.4)(2.1) = 71,691.48\text{ N} \approx 71.69\text{ kN}
-   * Center of pressure from top of upstream liquid (y_{p1}):
-     
-   * Height above the hinge at the bottom:
-     
- * Downstream Hydrostatic Force (F_2):
-   * Density of water: \rho_2 = 1000\text{ kg/m}^3
-   * Centroid from water surface: \bar{h}_2 = \frac{1.2}{2} = 0.6\text{ m}
-   * Force: F_2 = \rho_2 g A \bar{h}_2 = (1000)(9.81)(2.4)(0.6) = 14,126.4\text{ N} \approx 14.13\text{ kN}
-   * Center of pressure from top of downstream water (y_{p2}):
-     
-   * Height above the hinge at the bottom:
-     
- * Part (i): Resultant Force & Position:
-   * Net Resultant Force:
-     
-   * Location of Resultant Force (Height above bottom hinge h_{pR}):
-     
- * Part (ii): Force Required at the Top to Open Gate (F_{top}):
-   Taking moments about the bottom hinge:
-   
-Question 3
- * Given:
-   * Cylinder mass m = 10\text{ kg}, cross-sectional area A = 0.1\text{ m}^2, total weight W = 10 \times 9.81 = 98.1\text{ N}
-   * Liquid A: S_A = 0.8 \implies \rho_A = 800\text{ kg/m}^3; submerged depth in A: h_A = 0.1\text{ m}
-   * Liquid B: S_B = 1.0 \implies \rho_B = 1000\text{ kg/m}^3; submerged depth in B: h_B = 0.125\text{ m}
- * Gauge Pressure at the Cylinder Bottom:
-   
- * Buoyant Force (F_B) & String Tension (T):
-   * Total Upward Buoyant Force:
-     
-   * Vertical Equilibrium (\sum F_y = 0):
-     
-Question 4
+
+**Question 1**
+
+Total Viscous Drag Force ($F$):
+
+
+$$F = F_1 + F_2 = \mu A U \left( \frac{1}{y} + \frac{1}{h - y} \right)$$
+
+Minimizing Viscous Drag:
+To minimize $F$, differentiate with respect to $y$ and set to zero:
+
+
+$$\frac{dF}{dy} = \mu A U \left( -\frac{1}{y^2} + \frac{1}{(h - y)^2} \right) = 0$$
+
+$$\frac{1}{y^2} = \frac{1}{(h - y)^2}$$
+
+Relative Position ($y$):
+
+
+$$y = h - y \implies y = \frac{h}{2}$$
+
+---
+
+**Question 2**
+
+Upstream Hydrostatic Force ($F_1$):
+Density of upstream liquid: $\rho_1 = 1.45 \times 1000 = 1450\text{ kg/m}^3$
+Gate height $h_{\text{gate}} = 1.2\text{ m}$, width $w = 2.0\text{ m}$, area $A = 2.4\text{ m}^2$
+Distance from free surface to centroid of gate: $\bar{h}_1 = 1.5 + \frac{1.2}{2} = 2.1\text{ m}$
+Force: $F_1 = \rho_1 g A \bar{h}_1 = (1450)(9.81)(2.4)(2.1) = 71,691.48\text{ N} \approx 71.69\text{ kN}$
+Center of pressure from top of upstream liquid ($y_{p1}$):
+
+
+$$y_{p1} = \bar{h}_1 + \frac{I_{xc}}{A \bar{h}_1} = 2.1 + \frac{\frac{2.0 \times 1.2^3}{12}}{2.4 \times 2.1} = 2.157\text{ m}$$
+
+
+Height above the hinge at the bottom:
+
+
+$$h_{1,\text{hinge}} = (1.5 + 1.2) - 2.157 = 0.543\text{ m}$$
+
+Downstream Hydrostatic Force ($F_2$):
+Density of water: $\rho_2 = 1000\text{ kg/m}^3$
+Centroid from water surface: $\bar{h}_2 = \frac{1.2}{2} = 0.6\text{ m}$
+Force: $F_2 = \rho_2 g A \bar{h}_2 = (1000)(9.81)(2.4)(0.6) = 14,126.4\text{ N} \approx 14.13\text{ kN}$
+Center of pressure from top of downstream water ($y_{p2}$):
+
+
+$$y_{p2} = \bar{h}_2 + \frac{I_{xc}}{A \bar{h}_2} = 0.6 + \frac{\frac{2.0 \times 1.2^3}{12}}{2.4 \times 0.6} = 0.8\text{ m}$$
+
+
+Height above the hinge at the bottom:
+
+
+$$h_{2,\text{hinge}} = 1.2 - 0.8 = 0.4\text{ m}$$
+
+Part (i): Resultant Force & Position:
+Net Resultant Force:
+
+
+$$F_R = F_1 - F_2 = 71.69 - 14.13 = 57.56\text{ kN}$$
+
+
+Location of Resultant Force (Height above bottom hinge $h_{pR}$):
+
+
+$$h_{pR} = \frac{F_1 h_{1,\text{hinge}} - F_2 h_{2,\text{hinge}}}{F_R} = \frac{(71.69 \times 0.543) - (14.13 \times 0.4)}{57.56} = 0.578\text{ m}$$
+
+Part (ii): Force Required at the Top to Open Gate ($F_{\text{top}}$):
+Taking moments about the bottom hinge:
+
+
+$$F_{\text{top}} = \frac{F_1 h_{1,\text{hinge}} - F_2 h_{2,\text{hinge}}}{h_{\text{gate}}} = \frac{33.272}{1.2} = 27.72\text{ kN}$$
+
+---
+
+**Question 3**
+
+Given:
+Cylinder mass $m = 10\text{ kg}$, cross-sectional area $A = 0.1\text{ m}^2$, total weight $W = 10 \times 9.81 = 98.1\text{ N}$
+Liquid A: $S_A = 0.8 \implies \rho_A = 800\text{ kg/m}^3$; submerged depth in A: $h_A = 0.1\text{ m}$
+Liquid B: $S_B = 1.0 \implies \rho_B = 1000\text{ kg/m}^3$; submerged depth in B: $h_B = 0.125\text{ m}$
+
+Gauge Pressure at the Cylinder Bottom:
+
+
+$$P_{\text{bottom}} = \rho_A g h_A + \rho_B g h_B = (800 \times 9.81 \times 0.1) + (1000 \times 9.81 \times 0.125) = 2011.05\text{ Pa}$$
+
+Buoyant Force ($F_B$) & String Tension ($T$):
+Total Upward Buoyant Force:
+
+
+$$F_B = F_{BA} + F_{BB} = P_{\text{bottom}} A = 2011.05 \times 0.1 = 201.11\text{ N}$$
+
+
+Vertical Equilibrium ($\sum F_y = 0$):
+
+
+$$T = F_B - W = 201.11 - 98.1 = 103.01\text{ N}$$
+
+---
+
+**Question 4**
+
 Part (i): Curved Surface Forces
- * Parameters: Radius R = 1.2\text{ m}, Width W = 3.0\text{ m}, Depth to top of quadrant h_0 = 2.4\text{ m}.
- * Horizontal Component (F_H):
-   * Projected vertical height H = 1.2\text{ m}; Area A_p = 1.2 \times 3.0 = 3.6\text{ m}^2.
-   * Depth to centroid of projected area: \bar{h} = 2.4 + \frac{1.2}{2} = 3.0\text{ m}.
-   * F_H = \rho g A_p \bar{h} = (1000)(9.81)(3.6)(3.0) = 105,948\text{ N} \approx 105.95\text{ kN}.
-   * Line of Action (y_{pH} below surface):
-     
- * Vertical Component (F_V):
-   * Weight of water vertically above curved surface:
-     
-   * F_V = \rho g V = (1000)(9.81)(12.0329) \approx 118,042.8\text{ N} \approx 118.04\text{ kN}\text{ (acting downward)}.
-   * Line of Action (x_{pV} from vertical boundary R-Q):
-     
- * Resultant Force (F_R) & Angle (\theta):
-   * Magnitude:
-     
-   * Direction with horizontal:
-     
+Parameters: Radius $R = 1.2\text{ m}$, Width $W = 3.0\text{ m}$, Depth to top of quadrant $h_0 = 2.4\text{ m}$.
+
+Horizontal Component ($F_H$):
+Projected vertical height $H = 1.2\text{ m}$; Area $A_p = 1.2 \times 3.0 = 3.6\text{ m}^2$
+Depth to centroid of projected area: $\bar{h} = 2.4 + \frac{1.2}{2} = 3.0\text{ m}$
+
+
+$$F_H = \rho g A_p \bar{h} = (1000)(9.81)(3.6)(3.0) = 105,948\text{ N} \approx 105.95\text{ kN}$$
+
+
+Line of Action ($y_{pH}$ below surface):
+
+
+$$y_{pH} = \bar{h} + \frac{I_{xc}}{A_p \bar{h}} = 3.0 + \frac{\frac{3.0 \times 1.2^3}{12}}{3.6 \times 3.0} = 3.04\text{ m}$$
+
+Vertical Component ($F_V$):
+Weight of water vertically above curved surface:
+
+
+$$V = (h_0 R W) + \left(\frac{\pi}{4} R^2 W\right) = (2.4 \times 1.2 \times 3.0) + \left(\frac{\pi}{4} \times 1.2^2 \times 3.0\right) = 12.033\text{ m}^3$$
+
+$$F_V = \rho g V = (1000)(9.81)(12.033) = 118,042.8\text{ N} \approx 118.04\text{ kN}\text{ (acting downward)}$$
+
+
+Line of Action ($x_{pV}$ from vertical boundary R-Q):
+
+
+$$x_{pV} = \frac{V_{\text{rect}} x_{\text{rect}} + V_{\text{quad}} x_{\text{quad}}}{V_{\text{tot}}} = \frac{(8.64 \times 0.6) + \left(3.393 \times \frac{4(1.2)}{3\pi}\right)}{12.033} = 0.574\text{ m}$$
+
+Resultant Force ($F_R$) & Angle ($\theta$):
+Magnitude:
+
+
+$$F_R = \sqrt{F_H^2 + F_V^2} = \sqrt{105.95^2 + 118.04^2} = 158.62\text{ kN}$$
+
+
+Direction with horizontal:
+
+
+$$\theta = \tan^{-1}\left(\frac{F_V}{F_H}\right) = \tan^{-1}\left(\frac{118.04}{105.95}\right) = 48.09^\circ$$
+
 Part (ii): Pressure at Bottom of 6m Tank
- * Oil Layer: h_{oil} = 2\text{ m}, \rho_{oil} = 0.8 \times 1000 = 800\text{ kg/m}^3
-   
- * Water Layer: h_{water} = 4\text{ m}, \rho_{water} = 1000\text{ kg/m}^3
-   
+Oil Layer: $h_{\text{oil}} = 2\text{ m}$, $\rho_{\text{oil}} = 0.8 \times 1000 = 800\text{ kg/m}^3$
+
+
+$$P_{\text{oil}} = \rho_{\text{oil}} g h_{\text{oil}} = 800 \times 9.81 \times 2 = 15,696\text{ Pa}$$
+
+
+Water Layer: $h_{\text{water}} = 4\text{ m}$, $\rho_{\text{water}} = 1000\text{ kg/m}^3$
+
+
+$$P_{\text{water}} = \rho_{\text{water}} g h_{\text{water}} = 1000 \times 9.81 \times 4 = 39,240\text{ Pa}$$
+
+
+Total Pressure at Bottom:
+
+
+$$P_{\text{total}} = P_{\text{oil}} + P_{\text{water}} = 15,696 + 39,240 = 54,936\text{ Pa} = 54.94\text{ kPa}$$
