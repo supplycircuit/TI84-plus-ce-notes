@@ -1,0 +1,133 @@
+Here are full worked solutions in the LaTeX-style format we've used before. I've flagged the two spots (Q2 and Q3ii) where the scanned diagram has some ambiguity — I've stated my reading of the geometry explicitly so you can cross-check against your lecture figure.
+
+---
+
+**Question 1(i)**
+
+Gap on each side of the plate:
+$\frac{15-3}{2} = 6\text{ mm} = 0.006\text{ m}$ (matches the "Gap = 6mm" label).
+
+Shear stress on each face (Newton's law of viscosity):
+
+$$\tau = \mu \frac{V}{h}$$
+$$= 1.5 \times \frac{0.15}{0.006} = 37.5 \text{ N/m}^2$$
+
+Viscous force per face:
+
+$$F_\tau = \tau A = 37.5 \times (0.8 \times 0.8) = 24 \text{ N}$$
+
+Since there are two faces (both sides of the plate) and the plate moves at constant velocity, the applied force balances weight plus both viscous drag forces:
+
+$$F = W + 2F_\tau = 110 + 2(24) = \boxed{158 \text{ N}}$$
+
+---
+
+**Question 1(ii)**
+
+$\mu = 8.0 \text{ poise} $
+$= 0.8 \text{ Pa·s}$. At terminal (constant) velocity, the component of weight along the plane equals the viscous resisting force:
+
+$$W\sin\theta = \mu \frac{V}{t} A$$
+
+$$90\sin 30^\circ = 0.8 \times \frac{V}{0.003} \times 0.3$$
+
+$$45 = 80V$$
+
+$$V = \boxed{0.5625 \text{ m/s}}$$
+
+---
+
+**Question 2**
+
+*Reading of the figure:* radius $r = 1.25\text{ m}$, taking the cylinder centre $O$ as datum. Points $B$ (top), $C$ (left, level with $O$), $D$ (right, level with $O$), $A$ (bottom). Oil (SG 0.9) is in contact with the **entire left semicircle** ($B\to C\to A$), free surface $2.50\text{ m}$ above $O$. Liquid M (SG 0.8) is in contact with only the **lower-right quarter** ($D\to A$), free surface level with $O/D$. Per unit length ($L=1\text{ m}$), $\gamma_{oil}=8820\text{ N/m}^3$, $\gamma_M = 7840\text{ N/m}^3$.
+
+**Horizontal components** (force on the vertical projection, at the centroid depth):
+
+$$F_{H1} = \gamma_{oil}\,\bar h\,A_{proj} = 8820(2.50)(2.5\times1) = 55.13\text{ kN (→)}$$
+
+$$F_{H2} = \gamma_M\,\bar h\,A_{proj} = 7840(0.625)(1.25\times1) = 6.13\text{ kN (←)}$$
+
+**Vertical components** (weight of real/virtual liquid volume; for a full semicircular arc the horizontal strip terms cancel, leaving the buoyant volume of the arc itself):
+
+$$F_{V1} = \gamma_{oil}\left(\frac{\pi r^2}{2}\right) = 8820\left(\frac{\pi (1.25)^2}{2}\right) = 21.65\text{ kN (↑)}$$
+
+$$F_{V2} = \gamma_M\left(\frac{\pi r^2}{4}\right) = 7840\left(\frac{\pi (1.25)^2}{4}\right) = 9.62\text{ kN (↑)}$$
+
+**Location of horizontal components above A** (centre of pressure of each vertical strip):
+
+$$h_{cp,1} = \bar h + \frac{I_c}{\bar h A} \;\Rightarrow\; 1.04 \text{ m above } A$$
+$$h_{cp,2} = \bar h + \frac{I_c}{\bar h A} \;\Rightarrow\; 0.42 \text{ m above } A$$
+
+**Resultant force:**
+
+$$\Sigma F_H = 55.13 - 6.13 = 49.0\text{ kN}, \qquad \Sigma F_V = 21.65+9.62 = 31.27\text{ kN}$$
+
+$$R = \sqrt{49.0^2+31.27^2} = \boxed{58.14\text{ kN}}$$
+
+$$\theta = \tan^{-1}\left(\frac{31.27}{49.0}\right) = \boxed{32.6^\circ \text{ above horizontal}}$$
+
+Because every elemental pressure force on a circular arc acts radially, **the resultant passes through the centre $O$**, i.e. $1.25\text{ m}$ above $A$.
+
+---
+
+**Question 3(i)**
+
+Diagonal $d = a\sqrt2 = 0.6\sqrt2 = 0.8485\text{ m}$. Depth of centroid:
+
+$$\bar h = 0.6 + \frac{d}{2} = 0.6+0.4243 = 1.0243\text{ m}$$
+
+$$F = \gamma \bar h A = 9800(1.0243)(0.36) = \boxed{3.61\text{ kN}}$$
+
+For a square, the second moment of area about **any** centroidal axis is the same regardless of orientation:
+
+$$I_c = \frac{a^4}{12} = \frac{0.6^4}{12} = 0.0108\text{ m}^4$$
+
+$$h_{cp} = \bar h + \frac{I_c}{\bar h A} = 1.0243 + \frac{0.0108}{(1.0243)(0.36)} = \boxed{1.054\text{ m below the surface}}$$
+
+---
+
+**Question 3(ii)**
+
+*Reading of the figure:* $A$ and $C$ (top of the dome) are separated by $3\text{ m}$ of water inside the closed tank. The piping loop from $A$ to $B$ rises $4\text{ m}$ through the SG $= 0.8$ liquid, then descends $3\text{ m} + 2\text{ m} = 5\text{ m}$ through water to $B$.
+
+**Pressure at C** (going up 3 m in water from A):
+
+$$P_C = P_A - \gamma_w(3) = 60 - 9.8(3) = \boxed{30.6\text{ kPa}}$$
+
+Head in mm of mercury:
+
+$$h = \frac{P_C}{\gamma_{Hg}} = \frac{30{,}600}{133{,}000} = 0.2301\text{ m} = \boxed{230.1\text{ mm Hg}}$$
+
+**Pressure at B** (trace the piping loop):
+
+$$P_B = P_A - \gamma_{0.8}(4) + \gamma_w(3) + \gamma_w(2)$$
+
+$$P_B = 60 - 7.84(4) + 9.8(3) + 9.8(2) = 60 - 31.36 + 29.4+19.6 = \boxed{77.64\text{ kPa}}$$
+
+---
+
+**Question 4**
+
+Length of water added along the inclined tube:
+
+$$L_2 = \frac{V}{a} = \frac{7.5}{0.5} = 15\text{ cm} \;\Rightarrow\; \text{vertical height} = 15\sin30^\circ = 7.5\text{ cm}$$
+
+Let $h_1$ = rise in the vertical tube, $h_2$ = drop (vertical height) of the manometer-liquid interface in the inclined tube. Since the tube has uniform bore, conservation of manometer-liquid volume gives:
+
+$$h_1 = \frac{h_2}{\sin30^\circ} = 2h_2 \quad (1)$$
+
+Equating pressure at the junction from both limbs (both open to atmosphere):
+
+$$\gamma_1(h_1+h_2) = \gamma_2(0.075) \quad (2)$$
+
+Substituting (1) into (2), with $S_1=1.25,\ S_2=1.0$:
+
+$$3h_2 = \frac{S_2}{S_1}(0.075) = 0.8(0.075) = 0.06$$
+
+$$h_2 = 0.02\text{ m} = 2\text{ cm}$$
+
+$$h_1 = 2h_2 = \boxed{4\text{ cm (0.04 m) rise in the vertical tube}}$$
+
+---
+
+Q2 and Q3(ii) depend on how the diagram is meant to be read — if your lecturer's actual dimension lines differ from my interpretation, tell me and I'll redo those two with the corrected geometry.
