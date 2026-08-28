@@ -1,16 +1,10 @@
-Here are full worked solutions in the LaTeX-style format we've used before. I've flagged the two spots (Q2 and Q3ii) where the scanned diagram has some ambiguity — I've stated my reading of the geometry explicitly so you can cross-check against your lecture figure.
-
----
-
 **Question 1(i)**
 
-Gap on each side of the plate:
-$\frac{15-3}{2} = 6\text{ mm} = 0.006\text{ m}$ (matches the "Gap = 6mm" label).
+Gap on each side of the plate: $\frac{15-3}{2} = 6\text{ mm} = 0.006\text{ m}$ (matches the "Gap = 6mm" label).
 
 Shear stress on each face (Newton's law of viscosity):
 
-$$\tau = \mu \frac{V}{h}$$
-$$= 1.5 \times \frac{0.15}{0.006} = 37.5 \text{ N/m}^2$$
+$$\tau = \mu \frac{V}{h} = 1.5 \times \frac{0.15}{0.006} = 37.5 \text{ N/m}^2$$
 
 Viscous force per face:
 
@@ -24,8 +18,7 @@ $$F = W + 2F_\tau = 110 + 2(24) = \boxed{158 \text{ N}}$$
 
 **Question 1(ii)**
 
-$\mu = 8.0 \text{ poise} $
-$= 0.8 \text{ Pa·s}$. At terminal (constant) velocity, the component of weight along the plane equals the viscous resisting force:
+$\mu = 8.0 \text{ poise} = 0.8 \text{ Pa·s}$. At terminal (constant) velocity, the component of weight along the plane equals the viscous resisting force:
 
 $$W\sin\theta = \mu \frac{V}{t} A$$
 
@@ -130,4 +123,3 @@ $$h_1 = 2h_2 = \boxed{4\text{ cm (0.04 m) rise in the vertical tube}}$$
 
 ---
 
-Q2 and Q3(ii) depend on how the diagram is meant to be read — if your lecturer's actual dimension lines differ from my interpretation, tell me and I'll redo those two with the corrected geometry.
