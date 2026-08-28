@@ -243,3 +243,42 @@ $= 15,696 + (1000)(9.81)(4)$
 $= 15,696 + 39,240$
 $= 54,936\text{ Pa}$
 $= 54.94\text{ kPa}$
+
+
+  ### 6. Flow Measurement Devices
+
+---
+
+* **Venturi Meter (Flow Rate $Q$):**
+
+$$Q_{\text{actual}} = C_d \frac{A_1 A_2}{\sqrt{A_1^2 - A_2^2}} \sqrt{2g \Delta h}$$
+
+
+$$\Delta h = \left( \frac{P_1 - P_2}{\gamma_{\text{fluid}}} \right) + (z_1 - z_2)$$
+
+
+* **Orifice Meter (Flow Rate $Q$):**
+
+$$Q_{\text{actual}} = C_d \frac{A_0 A_1}{\sqrt{A_1^2 - A_0^2}} \sqrt{2g \Delta h}$$
+
+
+
+*Where $A_0$ is the orifice area, $A_1$ is the pipe area, and $C_d$ is typically $\approx 0.60$ to $0.65$.*
+* **Differential Manometer Equivalent Head ($\Delta h$):**
+For a U-tube manometer with gauge fluid density $\rho_m$ and pipe fluid density $\rho$:
+
+$$\Delta h = y \left( \frac{\rho_m}{\rho} - 1 \right) = y (S_{\text{gauge}} - S_{\text{fluid}})$$
+
+
+
+*Where $y$ is the deflection reading on the manometer.*
+* **Pitot Tube (Point Velocity $V$):**
+
+$$V_{\text{actual}} = C_v \sqrt{2g \Delta h} = C_v \sqrt{\frac{2(P_{\text{stagnation}} - P_{\text{static}})}{\rho}}$$
+
+
+
+*Where $C_v$ is the velocity coefficient (typically $\approx 0.98$ to $0.99$).*
+* **Stagnation Pressure ($P_0$ or $P_{\text{stagnation}}$):**
+
+$$P_0 = P_{\text{static}} + \frac{1}{2}\rho V^2$$
