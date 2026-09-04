@@ -1,0 +1,25 @@
+Part (C): Inductor and Capacitor Analysis
+Given data:
+Inductance, $L = 2\text{ H}$
+Inductor Current, $I = 4\text{ A}$ (steady DC)
+Capacitance, $C = 500\,\mu\text{F} = 500 \times 10^{-6}\text{ F}$
+Capacitor Voltage, $V = 200\text{ V}$ (steady DC)
+i. Behavior under steady-state DC conditions
+Inductor: Acts as a short circuit. In steady-state DC, the current is constant, meaning $\frac{di}{dt} = 0$, so the voltage across it ($v = L\frac{di}{dt}$) drops to zero.
+Capacitor: Acts as an open circuit. Once fully charged to the supply voltage in steady-state DC, the voltage is constant, meaning $\frac{dv}{dt} = 0$, so the current through it ($i = C\frac{dv}{dt}$) drops to zero.
+ii. Compute the energy stored in the inductor
+The energy stored in an inductor ($W_L$) is given by:
+$$W_L = \frac{1}{2} L I^2$$ 
+Substitute the given values:
+$$W_L = \frac{1}{2} \times 2 \times (4)^2$$ 
+$$W_L = 1 \times 16 = \mathbf{16\text{ Joules}}$$ 
+iii. Compute the energy stored in the capacitor
+The energy stored in a capacitor ($W_C$) is given by:
+$$W_C = \frac{1}{2} C V^2$$ 
+Substitute the given values:
+$$W_C = \frac{1}{2} \times (500 \times 10^{-6}) \times (200)^2$$ 
+$$W_C = 250 \times 10^{-6} \times 40,000$$ 
+$$W_C = \mathbf{10\text{ Joules}}$$ 
+iv. Why no power is consumed in the ideal inductor or capacitor at steady state
+Ideal Inductor: In steady-state DC, the voltage across an ideal inductor is zero. Since electrical power is $P = V \times I$, and $V = 0\text{ V}$, the power consumed is zero. It merely stores energy in its magnetic field without consuming it.
+Ideal Capacitor: In steady-state DC, the current flowing through an ideal capacitor is zero. Since electrical power is $P = V \times I$, and $I = 0\text{ A}$, the power consumed is zero. It merely stores energy in its electric field without consuming it.
