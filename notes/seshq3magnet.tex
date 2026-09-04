@@ -1,0 +1,25 @@
+Question Three.
+Question Three (A) — Magnetic Circuits
+Given Data:
+Mean diameter of the ring, $d = 30\text{ cm} = 0.3\text{ m}$
+Mean path length prior to gap, $l = \pi \times d = \pi \times 0.3 \approx 0.9425\text{ m}$
+Cross-sectional area, $A = 6\text{ cm}^2 = 6 \times 10^{-4}\text{ m}^2$
+Initial reluctance of the ring, $S_{\text{ring}} = 300,000\text{ A/Wb}$
+Coil turns, $N = 320\text{ turns}$, Current, $I = 1\text{ A}$
+i. The permeability of the steel alloy prior to making the gap
+The formula relating reluctance to dimensions and absolute permeability ($\mu$) is:
+$$S_{\text{ring}} = \frac{l}{\mu \cdot A}$$ 
+Rearranging to solve for the absolute permeability $\mu$:
+$$\mu = \frac{l}{S_{\text{ring}} \cdot A} = \frac{0.9425}{300,000 \times 6 \times 10^{-4}} = \frac{0.9425}{180} = \mathbf{5.236 \times 10^{-3}\text{ H/m}}$$ 
+(Note: The handwritten attempt in the photo incorrectly uses the diameter $0.3\text{ m}$ as the path length instead of calculating the mean circumference $\pi \cdot d$.)
+To find the relative permeability ($\mu_r$), divide by the permeability of free space ($\mu_0 = 4\pi \times 10^{-7}$):
+$$\mu_r = \frac{\mu}{\mu_0} = \frac{5.236 \times 10^{-3}}{4\pi \times 10^{-7}} \approx \mathbf{4166.7}$$ 
+ii. The magnetic flux setup in the ring
+After the radial air gap is cut into the ring, the air gap adds a separate reluctance $S_{\text{gap}}$ in series with the remaining steel path.
+Reluctance of the air gap: $S_{\text{gap}} = \frac{2}{3} \times S_{\text{ring}} = \frac{2}{3} \times 300,000 = 200,000\text{ A/Wb}$
+Total reluctance of the magnetic circuit:
+$$S_{\text{total}} = S_{\text{ring}} + S_{\text{gap}} = 300,000 + 200,000 = 500,000\text{ A/Wb}$$ 
+Now, calculate the Magnetomotive Force (MMF):
+$$\text{MMF} = N \cdot I = 320 \times 1 = 320\text{ A-t}$$ 
+The magnetic flux ($\Phi$) setup in the ring is:
+$$\Phi = \frac{\text{MMF}}{S_{\text{total}}} = \frac{320}{500,000} = \mathbf{6.4 \times 10^{-4}\text{ Wb}} \quad (\text{or } 0.64\text{ mWb})$$ 
