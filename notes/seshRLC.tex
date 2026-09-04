@@ -1,0 +1,29 @@
+Question Three (B) — Parallel RLC Circuit
+Given Data:
+Resistance, $R = 5\text{ k}\Omega = 5000\ \Omega$
+Inductance, $L = 10\text{ mH} = 10 \times 10^{-3}\text{ H}$
+Capacitance, $C = 1\ \mu\text{F} = 1 \times 10^{-6}\text{ F}$
+Supply Voltage, $V_{\text{rms}} = 10\text{ V}$
+i. The resonant frequency ($f_0$)
+The resonant frequency for a parallel RLC network is given by:
+$$f_0 = \frac{1}{2\pi \sqrt{L \cdot C}}$$ 
+$$f_0 = \frac{1}{2\pi \sqrt{10 \times 10^{-3} \times 1 \times 10^{-6}}} = \frac{1}{2\pi \sqrt{10^{-8}}} = \frac{1}{2\pi \times 10^{-4}} = \frac{10,000}{2\pi} \approx \mathbf{1591.55\text{ Hz}}$$ 
+ii. The current magnification and bandwidth
+Current Magnification / Quality Factor ($Q$):
+For a parallel resonant circuit, $Q$ represents the ratio of the reactive branch current to the supply source current:
+$$Q = R \sqrt{\frac{C}{L}} = 5000 \times \sqrt{\frac{1 \times 10^{-6}}{10 \times 10^{-3}}} = 5000 \times \sqrt{10^{-4}} = 5000 \times 0.01 = \mathbf{50}$$ 
+Bandwidth ($\text{BW}$):
+$$\text{BW} = \frac{f_0}{Q} = \frac{1591.55}{50} = \mathbf{31.83\text{ Hz}}$$ 
+iii. The dynamic impedance as seen from the source
+At parallel resonance, the inductive admittance and capacitive admittance cancel each other exactly. Therefore, the total network dynamic impedance ($Z_d$) becomes purely resistive and maximum:
+$$Z_d = R = \mathbf{5\text{ k}\Omega} \quad (5000\ \Omega)$$ 
+iv. The branch source and branch currents
+Source current ($I_s$):
+$$I_s = \frac{V_{\text{rms}}}{Z_d} = \frac{10}{5000} = \mathbf{2\text{ mA}} \quad (0.002\text{ A})$$ 
+Resistor branch current ($I_R$):
+$$I_R = \frac{V_{\text{rms}}}{R} = \frac{10}{5000} = \mathbf{2\text{ mA}}$$ 
+Inductor branch current ($I_L$):
+$$I_L = \frac{V_{\text{rms}}}{2\pi f_0 L} = \frac{10}{2\pi \times 1591.55 \times 10 \times 10^{-3}} = \frac{10}{100} = \mathbf{100\text{ mA}} \quad (0.1\text{ A})$$ 
+Capacitor branch current ($I_C$):
+$$I_C = V_{\text{rms}} \times 2\pi f_0 C = 10 \times (2\pi \times 1591.55 \times 1 \times 10^{-6}) = \mathbf{100\text{ mA}} \quad (0.1\text{ A})$$ 
+v.
