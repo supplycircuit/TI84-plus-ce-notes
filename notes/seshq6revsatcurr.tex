@@ -1,0 +1,66 @@
+Question Six (15 Marks)
+(A) Reverse Saturation Current Calculation
+Given Data:
+
+
+• Forward voltage drop, $V = 2.5\text{ V}$
+• Forward diode current, $I = 600\text{ mA} = 0.6\text{ A}$
+• Ideality factor, $\eta = 4$
+• Standard Room Temperature Thermal Voltage Assumption: $V_T \approx 26\text{ mV} = 0.026\text{ V}$
+
+Using the basic standard diode current equation:
+$$I = I_s \left( e^{\frac{V}{\eta V_T}} - 1 \right)$$ 
+Since $e^{\frac{V}{\eta V_T}} \gg 1$, we can simplify and rearrange to solve for the reverse saturation current ($I_s$):
+$$I_s = \frac{I}{e^{\frac{V}{\eta V_T}}} = \frac{0.6}{e^{\frac{2.5}{4 \times 0.026}}} = \frac{0.6}{e^{24.0385}} = \frac{0.6}{2.753 \times 10^{10}} = \mathbf{2.18 \times 10^{-11}\text{ A}} \quad (\text{or } 21.8\text{ pA})$$ 
+(Note: If your class uses exactly $V_T = 25\text{ mV}$, the calculation yields $I_s = \frac{0.6}{e^{25}} = \mathbf{8.33 \times 10^{-12}\text{ A}}$).
+
+(B) Forward Voltage Calculation
+Given Data:
+
+
+• Forward current, $I = 30\text{ mA} = 0.03\text{ A}$
+• Reverse saturation current, $I_s = 0.5\text{ nA} = 0.5 \times 10^{-9}\text{ A}$
+• Temperature, $T = 30^\circ\text{C} = 30 + 273.15 = 303.15\text{ K}$
+• Ideality factor for a standard silicon diode (unless specified otherwise) is typically taken as $\eta = 1$ in analytical problems.
+
+
+1. Calculate the thermal voltage ($V_T$) at $30^\circ\text{C}$:
+$$V_T = \frac{k \cdot T}{q} = \frac{1.3806 \times 10^{-23} \times 303.15}{1.6022 \times 10^{-19}} \approx \mathbf{0.02612\text{ V}} \quad (26.12\text{ mV})$$ 
+2. Rearrange the diode equation to solve for $V$:
+$$V = \eta V_T \ln\left(\frac{I}{I_s} + 1\right)$$ 
+$$V = 1 \times 0.02612 \times \ln\left(\frac{0.03}{0.5 \times 10^{-9}} + 1\right)$$ 
+$$V = 0.02612 \times \ln(60,000,001) = 0.02612 \times 17.91 = \mathbf{0.468\text{ V}}$$ 
+(Note: If your curriculum assumes $\eta = 2$ for silicon diodes under low currents, the resulting value will double to $V = 2 \times 0.468 = \mathbf{0.936\text{ V}}$).
+(C) NPN BJT Voltage Divider Analysis
+(Note: The prompt text says "using the emitter bias approach, draw...", but the provided circuit values describe a classic Voltage Divider Bias network, which is then solved using its Thévenin input reduction as asked in the sub-questions).
+i. Find the Thévenin equivalent voltage $V_{TH}$ and resistance $R_{TH}$
+
+
+• Thévenin Voltage ($V_{TH}$):
+$$V_{TH} = V_{CC} \times \left( \frac{R_2}{R_1 + R_2} \right) = 15 \times \left( \frac{12\text{ k}\Omega}{68\text{ k}\Omega + 12\text{ k}\Omega} \right) = 15 \times \frac{12}{80} = \mathbf{2.25\text{ V}}$$ 
+• Thévenin Resistance ($R_{TH}$):
+$$R_{TH} = \frac{R_1 \times R_2}{R_1 + R_2} = \frac{68\text{ k}\Omega \times 12\text{ k}\Omega}{68\text{ k}\Omega + 12\text{ k}\Omega} = \frac{816}{80} = 10.2\text{ k}\Omega = \mathbf{10,200\ \Omega}$$ 
+
+
+ii. Calculate branch currents: $I_B$, $I_C$, and $I_E$
+Using the loop equation derived from the base circuit interface:
+$$I_B = \frac{V_{TH} - V_{BE}}{R_{TH} + (\beta + 1)R_E}$$ 
+$$I_B = \frac{2.25 - 0.7}{10,200 + (120 + 1)(1000)} = \frac{1.55}{10,200 + 121,000} = \frac{1.55}{131,200} \approx \mathbf{11.81\ \mu\text{A}}$$ 
+Now compute the remaining current loops:
+
+
+• Collector Current ($I_C$):
+$$I_C = \beta \cdot I_B = 120 \times 11.81\ \mu\text{A} = \mathbf{1.418\text{ mA}}$$ 
+• Emitter Current ($I_E$):
+$$I_E = (\beta + 1) \cdot I_B = 121 \times 11.81\ \mu\text{A} = \mathbf{1.430\text{ mA}}$$ 
+
+
+iii. Determine terminal voltages: $V_C$, $V_E$, and $V_{CE}$
+
+
+• Emitter Voltage ($V_E$):
+$$V_E = I_E \times R_E = 1.430\text{ mA} \times 1\text{ k}\Omega = \mathbf{1.430\text{ V}}$$ 
+• Collector Voltage ($V_C$):
+$$V_C = V_{CC} - (I_C \times R_C) = 15 - (1.418\text{ mA} \times 3.3\text{ k}\Omega) = 15 - 4.679 = \mathbf{10.321\text{ V}}$$ 
+• Collector-Emitter Voltage ($V_{CE}$):
+$$V_{CE} = V_C - V_E = 10.321\text{ V} - 1.430\text{ V} = \mathbf{8.891\text{ V}}$$ 
