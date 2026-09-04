@@ -1,0 +1,38 @@
+QUESTION TWO
+i) Kirchhoff's Voltage Law Expression for Base Current
+Applying KVL to the input loop:
+Voltage rise: +V_{BB} Voltage drops: -I_B R_B, -V_{BE}
+Therefore: V_{BB} - I_B R_B - V_{BE} = 0
+V_{BB} - V_{BE} = I_B R_B
+I_B = \frac{V_{BB} - V_{BE}}{R_B}
+ii) Calculating the Base Current
+Given:
+· V_{BB} = 3.3\text{ V} · V_{BE} = 0.7\text{ V} · R_B = 10\text{ k}\Omega = 10,000\ \Omega
+I_B = \frac{3.3 - 0.7}{10,000}
+I_B = \frac{2.6}{10,000} = 0.00026\text{ A} = 0.26\text{ mA}
+\boxed{I_B = 0.26\text{ mA}}
+iii) Calculating the Collector Current
+Given:
+· V_{CC} = 12\text{ V} · R_C = 1\text{ k}\Omega · V_{CE} = 0.5\text{ V}
+Applying KVL to the collector loop:
+V_{CC} - I_C R_C - V_{CE} = 0
+V_{CC} - V_{CE} = I_C R_C
+I_C = \frac{V_{CC} - V_{CE}}{R_C}
+I_C = \frac{12 - 0.5}{1000}
+I_C = \frac{11.5}{1000} = 0.0115\text{ A} = 11.5\text{ mA}
+\boxed{I_C = 11.5\text{ mA}}
+iv) Why is a BJT Called a Current Controlled Device?
+A BJT is called a current controlled device because:
+The base current (I_B) controls the collector current (I_C). The relationship is given by:
+I_C = \beta I_B
+where \beta is the current gain of the transistor.
+A small change in base current produces a much larger change in collector current, 
+demonstrating that the output current is controlled by the input current.
+v) Maximum and Minimum Values of Transistor Operation
+Cut-off Region:
+· I_B = 0 · I_C = 0 · V_{CE} = V_{CC} = 12\text{ V} · I_{C(min)} = 0\text{ A}
+Saturation Region:
+· V_{CE} \approx 0\text{ V} · I_{C(sat)} = \frac{V_{CC}}{R_C} = \frac{12}{1000} = 12\text{ mA}
+Summary:
+· I_{C(min)} = 0\text{ A} (cut-off) · I_{C(max)} = 12\text{ mA} (saturation) · V_{CE(min)} = 0\text{ V} (saturation) · V_{CE(max)} = 12\text{ V} (cut-off)
+With V_{CE} = 0.5\text{ V} and I_C = 11.5\text{ mA}, the transistor is operating close to saturation.
