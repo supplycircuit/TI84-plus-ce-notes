@@ -1,0 +1,77 @@
+1. Fundamental Quantities & Hopkinson's Law
+The foundation of magnetic circuit analysis relies on Hopkinson's Law, which is the magnetic equivalent of Ohm's Law.
+
+* Magnetomotive Force (MMF, $\mathcal{F}$): $\mathcal{F} = N \cdot I$ (Units: Ampere-turns, $\text{AT}$)
+* $N$ = Number of turns in the coil
+   * $I$ = Electric current in amperes ($\text{A}$)
+* Hopkinson's Law: $\mathcal{F} = \Phi \cdot \mathcal{R}$
+* $\Phi$ = Magnetic flux
+   * $\mathcal{R}$ = Magnetic reluctance
+* Magnetic Flux ($\Phi$): $\Phi = \int \mathbf{B} \cdot d\mathbf{A} = B \cdot A$ (Units: Webers, $\text{Wb}$)
+* $B$ = Magnetic flux density
+   * $A$ = Cross-sectional area ($\text{m}^2$)
+* Magnetic Flux Density ($B$): $B = \frac{\Phi}{A}$ (Units: Tesla, $\text{T}$ or $\text{Wb/m}^2$)
+
+------------------------------
+## 2. Material Properties & Reluctance
+These formulas define how a physical structure and its material composition oppose or permit magnetic flux.
+
+* Magnetic Reluctance ($\mathcal{R}$): $\mathcal{R} = \frac{l}{\mu \cdot A} = \frac{l}{\mu_0 \mu_r A}$ (Units: $\text{AT/Wb}$ or $\text{H}^{-1}$)
+* $l$ = Mean length of the magnetic path ($\text{m}$)
+   * $\mu$ = Absolute permeability of the material
+   * $\mu_0$ = Permeability of free space ($4\pi \times 10^{-7} \text{ H/m}$)
+   * $\mu_r$ = Relative permeability of the material (dimensionless)
+* Magnetic Permeance ($\mathcal{P}$): $\mathcal{P} = \frac{1}{\mathcal{R}} = \frac{\mu \cdot A}{l}$ (Units: Henrys, $\text{H}$ or $\text{Wb/AT}$)
+* Permeance represents the ease with which magnetic flux can be established (analogous to electrical conductance).
+* Magnetic Field Intensity / Strength ($H$): $H = \frac{\mathcal{F}}{l} = \frac{N \cdot I}{l}$ (Units: Ampere-turns per meter, $\text{AT/m}$ or $\text{A/m}$)
+* Constitutive Relation (B-H Relationship): $B = \mu \cdot H = \mu_0 \mu_r H$
+
+------------------------------
+## 3. Series and Parallel Magnetic Circuits
+Magnetic circuits can be combined just like electrical resistors using Kirchhoff's Laws for magnetic circuits.
+## Series Circuits (e.g., an iron core with an air gap)
+
+* Total Flux: $\Phi_{\text{total}} = \Phi_1 = \Phi_2 = \Phi_3 = \dots$
+* Total Reluctance: $\mathcal{R}_{\text{total}} = \mathcal{R}_1 + \mathcal{R}_2 + \mathcal{R}_3 + \dots$
+* Total MMF (Kirchhoff's MMF Law): $\mathcal{F}_{\text{total}} = \mathcal{F}_1 + \mathcal{F}_2 + \dots = \Phi \mathcal{R}_1 + \Phi \mathcal{R}_2 + \dots$
+* Ampere-Turns Balance: $N \cdot I = H_1 l_1 + H_2 l_2 + H_g l_g$ (where $g$ denotes an air gap)
+
+## Parallel Circuits (e.g., multi-legged transformer cores)
+
+* Total Flux (Kirchhoff's Flux Law): $\Phi_{\text{total}} = \Phi_1 + \Phi_2 + \Phi_3 + \dots$
+* Total Reluctance: $\frac{1}{\mathcal{R}_{\text{total}}} = \frac{1}{\mathcal{R}_1} + \frac{1}{\mathcal{R}_2} + \frac{1}{\mathcal{R}_3} + \dots$
+* MMF across parallel branches: $\mathcal{F}_{\text{branch}} = \Phi_1 \mathcal{R}_1 = \Phi_2 \mathcal{R}_2$
+
+------------------------------
+## 4. Inductance and Energy Formulas
+
+* Self-Inductance ($L$): $L = \frac{N \cdot \Phi}{I} = \frac{N^2}{\mathcal{R}} = \frac{N^2 \cdot \mu \cdot A}{l}$ (Units: Henrys, $\text{H}$)
+* Mutual Inductance ($M$): $M = \frac{N_2 \cdot \Phi_{12}}{I_1} = \frac{N_1 N_2}{\mathcal{R}}$ (Units: $\text{H}$)
+* $\Phi_{12}$ = Flux linking coil 2 produced by current in coil 1
+* Coupling Coefficient ($k$): $k = \frac{M}{\sqrt{L_1 L_2}}$ (Range: $0 \le k \le 1$)
+* Magnetic Energy Density ($w_m$): $w_m = \frac{1}{2} B \cdot H = \frac{1}{2} \mu H^2 = \frac{B^2}{2\mu}$ (Units: Joules per cubic meter, $\text{J/m}^3$)
+* Total Stored Magnetic Energy ($W$): $W = \frac{1}{2} L \cdot I^2 = \int_V w_m \, dV = \frac{1}{2} \cdot \frac{B^2}{2\mu} \cdot (A \cdot l)$ (Units: Joules, $\text{J}$)
+
+------------------------------
+## 5. Air Gaps and Fringing Effects
+When an air gap exists in a magnetic core, the magnetic field lines bulge outward, a phenomenon called fringing.
+
+* Air Gap Reluctance ($\mathcal{R}_g$): $\mathcal{R}_g = \frac{l_g}{\mu_0 \cdot A_g}$
+* $l_g$ = Physical length of the air gap
+   * $A_g$ = Effective cross-sectional area of the air gap
+* Fringing Factor Correction: If the cross-section is a rectangle with dimensions $a$ and $b$:
+* $A_g = (a + l_g) \cdot (b + l_g)$ (Approximation adjusting for the bulging field)
+
+------------------------------
+## 6. Magnetic Force (Electromagnets)
+
+* Attractive Force of an Electro-magnet ($F_e$): $F_e = \frac{B^2 \cdot A}{2\mu_0}$ (Units: Newtons, $\text{N}$)
+* This formula calculates the lifting or pulling force exerted perpendicular to the pole face area $A$.
+
+If you are working on a specific assignment or design project, tell me:
+
+* Are you dealing with an air gap or a continuous core?
+* Do you need to calculate inductance, flux density, or the lifting force of a magnet?
+
+I can map out a specific problem breakdown or generate a step-by-step example for you.
+
