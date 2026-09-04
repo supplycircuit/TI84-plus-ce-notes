@@ -1,0 +1,67 @@
+Question Two.
+Question Two (A)
+Circuit Simplification & Impedance Calculations
+Given supply voltage: $v_s(t) = 16\sqrt{2}\sin(2\pi f t)\text{ V}$ with $f = 50\text{ Hz}$.
+The RMS value of the voltage is $V_s = 16\text{ V}$. Using this as our reference phasor:
+$$\mathbf{V}_s = 16\angle 0^\circ\text{ V}$$ 
+Parallel section $Z_A$ (where $I_2$ and $I_3$ split):
+$$Z_A = \frac{1 \cdot (-j2)}{1 - j2} = \frac{-j2(1 + j2)}{5} = 0.8 - j0.4\ \Omega$$ 
+Parallel sub-combination $Z_B$ (far right, with $I_6$ and $I_7$):
+$$Z_B = \frac{(j4)(-j2)}{j4 - j2} = \frac{8}{j2} = -j4\ \Omega$$ 
+Total branch impedance for path 5 ($I_5$):
+$$Z_5 = 4 + j2 + Z_B = 4 + j2 - j4 = 4 - j2\ \Omega$$ 
+Total branch impedance for path 4 ($I_4$):
+$$Z_4 = 2 + j6 - j2 = 2 + j4\ \Omega$$ 
+Combined parallel impedance of branches 4 and 5 ($Z_C$):
+$$Z_C = \frac{Z_4 \cdot Z_5}{Z_4 + Z_5} = \frac{(2 + j4)(4 - j2)}{(2 + j4) + (4 - j2)} = \frac{16 + j12}{6 + j2} = 3 + j1\ \Omega$$ 
+Total Network Impedance ($Z_{\text{total}}$):
+$$Z_{\text{total}} = Z_A + Z_C = (0.8 - j0.4) + (3 + j1) = 3.8 + j0.6\ \Omega = \mathbf{3.847\angle 8.97^\circ\ \Omega}$$ 
+i. RMS values (in phasor representation) of all branch currents
+Total Supply Current ($\mathbf{I}_1$):
+$$\mathbf{I}_1 = \frac{\mathbf{V}_s}{Z_{\text{total}}} = \frac{16\angle 0^\circ}{3.847\angle 8.97^\circ} = \mathbf{4.159\angle -8.97^\circ\text{ A}}$$ 
+Current $\mathbf{I}_2$ (through $1\ \Omega$):
+$$\mathbf{I}_2 = \mathbf{3.722\angle -35.55^\circ\text{ A}}$$ 
+Current $\mathbf{I}_3$ (through $-j2\ \Omega$):
+$$\mathbf{I}_3 = \mathbf{1.861\angle 54.45^\circ\text{ A}}$$ 
+Current $\mathbf{I}_4$ (through branch 4):
+$$\mathbf{I}_4 = \mathbf{2.941\angle -53.97^\circ\text{ A}}$$ 
+Current $\mathbf{I}_5$ (through branch 5):
+$$\mathbf{I}_5 = \mathbf{2.941\angle 36.03^\circ\text{ A}}$$ 
+Current $\mathbf{I}_6$ (through $+j4\ \Omega$):
+$$\mathbf{I}_6 = \mathbf{2.941\angle -143.97^\circ\text{ A}}$$ 
+Current $\mathbf{I}_7$ (through $-j2\ \Omega$):
+$$\mathbf{I}_7 = \mathbf{5.882\angle 36.03^\circ\text{ A}}$$ 
+ii. Phasor Diagram Guide
+To draw the phasor diagram accurately on paper:
+Draw $\mathbf{V}_s$ along the horizontal x-axis at $0^\circ$.
+Plot $\mathbf{I}_1$ at a small angle of $-8.97^\circ$ (lagging below the x-axis).
+Plot the remaining currents relative to the horizontal using their computed phase angles (e.g., $\mathbf{I}_3$ in the first quadrant at $+54.45^\circ$, $\mathbf{I}_6$ in the third quadrant at $-143.97^\circ$).
+iii. Instantaneous expression for $I_1$ and Overall Power Factor
+Peak current: $I_{1,\text{peak}} = 4.159 \times \sqrt{2} \approx 5.88\text{ A}$
+Instantaneous Expression:
+$$i_1(t) = \mathbf{5.88\sin(2\pi \cdot 50t - 8.97^\circ)\text{ A}}$$ 
+Overall Power Factor:
+$$\text{PF} = \cos(8.97^\circ) = \mathbf{0.988\text{ lagging}}$$ 
+Question Two (B)
+i. Impedance, Currents, and Phasor Diagram
+Motor Equivalent Impedance ($Z_m$):
+$$\theta_1 = \cos^{-1}(0.776) = 39.1^\circ$$ 
+$$\vert{}Z_m\vert{} = \frac{V}{I_m} = \frac{230}{10} = 23\ \Omega \implies Z_m = 23\angle 39.1^\circ = \mathbf{17.85 + j14.51\ \Omega}$$ 
+Circuit Currents after correction:
+Active Power: $P = 230 \times 10 \times 0.776 = 1784.8\text{ W}$
+New Supply Current: $I_{\text{new}} = \frac{1784.8}{230 \times 0.95} = \mathbf{8.17\text{ A}}$
+Capacitor Current: $I_C = 10\sin(39.1^\circ) - 8.17\sin(18.19^\circ) = \mathbf{3.76\text{ A}}$
+ii. Power Triangle Layout
+Before Correction: Draw a right triangle with Real Power $P = 1784.8\text{ W}$ (base), Reactive Power $Q_1 = 1451\text{ VAR}$ (vertical side pointing up), and Apparent Power $S_1 = 2300\text{ VA}$ (hypotenuse at $39.1^\circ$).
+After Correction: The base $P$ remains the same. The vertical height reduces to $Q_2 = 586.6\text{ VAR}$because the capacitor cancels out $Q_C = 864.4\text{ VAR}$ pointing downwards.
+iii. Capacitor Ratings
+kVAR Rating:
+$$Q_C = \frac{230\text{ V} \times 3.76\text{ A}}{1000} = \mathbf{0.864\text{ kVAR}}$$ 
+Equivalent Capacitance ($C$):
+$$X_C = \frac{230}{3.76} = 61.17\ \Omega \implies C = \frac{1}{2\pi \cdot 50 \cdot 61.17} = \mathbf{52.03\ \mu\text{F}}$$ 
+iv. Five (5) Benefits of Adding the Capacitor Bank
+Reduces total current consumption from the main grid supply line (from $10\text{ A}$ to $8.17\text{ A}$).
+Lowers power distribution losses ($I^2R$ heat losses) across connecting circuit cables.
+Improves system voltage stability and regulation at the motor terminals.
+Frees up system load capacity (kVA), allowing extra equipment to be supported safely by the main transformer grid.
+Prevents utility penalties on utility billing due to low reactive energy utilization metrics.
