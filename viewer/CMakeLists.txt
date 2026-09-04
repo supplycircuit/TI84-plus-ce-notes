@@ -32,7 +32,7 @@ set(TEX_CORE_SOURCES
 
 cedev_add_program(
   TARGET notes_viewer
-  NAME "NOTES"
+  NAME "EESESH"
   DESCRIPTION "libtexce notes viewer"
   SOURCES
     ${CMAKE_CURRENT_LIST_DIR}/src/main.c
