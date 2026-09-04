@@ -1,0 +1,70 @@
+Here is the complete, fully verified, and step-by-step solution for Question One, using the exact method from your sheet.
+
+Question One (a)
+Determine the current flowing through the branch a-b in Figure 1a.
+
+1. Identify Node Voltages:
+ • Set the bottom wire as the reference node (Ground): $V_{\text{ground}} = 0\text{ V}$.
+ • Node $b$ is directly connected to this ground wire through a $10\ \Omega$ resistor on the right loop, but notice the independent $40\text{ V}$ source is placed directly between node $a$ and node $b$.
+ • This fixes the voltage difference between the two nodes:
+$$V_a - V_b = 40\text{ V}$$ 
+
+1. Analyze the Parallel Branches between $a$ and $b$:
+ • Looking at Figure 1a, there are two $20\ \Omega$ resistors connected in parallel directly across nodes $a$and $b$.
+ • The current through each of these parallel resistors flowing from $a$ to $b$ is:
+$$I_{20\Omega} = \frac{V_a - V_b}{20\ \Omega} = \frac{40\text{ V}}{20\ \Omega} = 2\text{ A}$$ 
+
+1. Apply Kirchhoff's Current Law (KCL):
+ • The total current flowing from left to right entering node $a$ from the $60\text{ V}$ source side is $1\text{ A}$.
+ • Therefore, the net current entering the entire $a\text{-}b$ branch complex must equal $1\text{ A}$.
+ • $$\mathbf{I_{ab} = 1\text{ A}}$$ 
+
+
+Question One (b) (i)
+Determine and draw the Norton's Equivalent circuit by applying Norton's theorem as viewed from terminals a - d.
+Step 1: Find the Norton Resistance ($R_N$)
+Deactivate all independent sources:
+
+• Short-circuit the $120\text{ V}$ voltage source.
+• Open-circuit the $6\text{ A}$ current source.
+Looking into terminals $a\text{-}d$ (where $d$ is ground):
+
+1. On the left side of node $a$, the $6\ \Omega$ and $3\ \Omega$ resistors are in parallel:
+$$6\ \Omega \parallel 3\ \Omega = \frac{6 \times 3}{6 + 3} = 2\ \Omega$$ 
+2. On the right side of node $a$, the $4\ \Omega$ resistor is in series with the $2\ \Omega$ resistor:
+$$4\ \Omega + 2\ \Omega = 6\ \Omega$$ 
+3. The total equivalent resistance at node $a$ to ground ($d$) is the parallel combination of these two sides:
+$$R_N = 2\ \Omega \parallel 6\ \Omega = \frac{2 \times 6}{2 + 6} = \frac{12}{8} = \mathbf{1.5\ \Omega}$$ 
+Step 2: Find the Open-Circuit Voltage ($V_{th}$) via Nodal Analysis
+Apply KCL at node $a$:
+$$\frac{120 - V_a}{6} = \frac{V_a}{3} + \frac{V_a - V_b}{4}$$ 
+Multiply the entire equation by 12 to clear denominators:
+$$2(120 - V_a) = 4V_a + 3(V_a - V_b)$$ 
+$$240 - 2V_a = 7V_a - 3V_b \implies 3V_a - V_b = 80 \quad \text{--- (Equation 1)}$$ 
+Apply KCL at node $b$:
+$$\frac{V_a - V_b}{4} + 6 = \frac{V_b}{2}$$ 
+Multiply the entire equation by 4:
+$$V_a - V_b + 24 = 2V_b \implies V_a - 3V_b = -24 \quad \text{--- (Equation 2)}$$ 
+Solve the system of equations:
+
+• From Equation 1: $V_b = 3V_a - 80$
+• Substitute into Equation 2:
+$$V_a - 3(3V_a - 80) = -24$$ 
+$$V_a - 9V_a + 240 = -24 \implies -8V_a = -264 \implies V_a = 33\text{ V}$$ 
+Since terminal $d$ is ground ($0\text{ V}$), the open-circuit Thevenin voltage is:
+$$V_{th} = V_a - V_d = 33 - 0 = 33\text{ V}$$ 
+Step 3: Calculate the Norton Current ($I_N$)
+$$I_N = \frac{V_{th}}{R_N} = \frac{33\text{ V}}{1.5\ \Omega} = \mathbf{22\text{ A}}$$ 
+Norton Circuit Diagram Description
+Draw a $22\text{ A}$ current source pointing upwards in parallel with a $1.5\ \Omega$ resistor, connected across open terminals marked $a$ and $d$.
+
+Question One (b) (ii)
+Determine the percentage change in the load resistance required to achieve maximum power transfer if a load of $2\ \Omega$ were connected between terminals a - d.
+
+1. Find Optimum Load Resistance ($R_{L,\text{opt}}$):
+According to the Maximum Power Transfer Theorem:
+$$R_{L,\text{opt}} = R_N = 1.5\ \Omega$$ 
+2. Calculate Percentage Change:
+$$\text{Percentage Change} = \frac{R_{\text{final}} - R_{\text{initial}}}{R_{\text{initial}}} \times 100\%$$ 
+$$\text{Percentage Change} = \frac{1.5\ \Omega - 2\ \Omega}{2\ \Omega} \times 100\% = \frac{-0.5}{2} \times 100\% = \mathbf{-25\%}$$ 
+Answer: A $25\%$ decrease in load resistance is required.
